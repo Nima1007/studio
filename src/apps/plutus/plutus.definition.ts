@@ -10,40 +10,61 @@ export const PLUTUS_DEFINITION = appDefinition({
     'Plutus is a governance aggregator with the goal of amassing governance power in the Dopex/Jones ecosystem through the capture of veDPX and veJONES',
   url: 'https://plutusdao.io/',
   groups: {
-    ve: {
-      id: 've',
+    plsDpx: {
+      id: 'pls-dpx',
       type: GroupType.TOKEN,
-      label: 'veTokens',
-      groupLabel: 'Farms',
+      label: 'plsDPX',
     },
+
+    plsJones: {
+      id: 'pls-jones',
+      type: GroupType.TOKEN,
+      label: 'plsJONES',
+    },
+
     lock: {
       id: 'lock',
       type: GroupType.POSITION,
       label: 'Locked PLS',
       groupLabel: 'Farms',
     },
-    jones: {
+
+    plsJonesFarm: {
       id: 'jones',
       type: GroupType.POSITION,
-      label: 'Staked PlsJones',
-      groupLabel: 'Farms',
+      label: 'Staked plsJONES',
     },
-    dpx: {
-      id: 'dpx',
+
+    plsDpxFarm: {
+      id: 'pls-dpx-farm',
       type: GroupType.POSITION,
-      label: 'Staked PlsDPX',
-      groupLabel: 'Farms',
+      label: 'Staked plsDPX',
     },
-    stake: {
-      id: 'stake',
+
+    plsDpxFarmV2: {
+      id: 'pls-dpx-farm-v2',
+      type: GroupType.POSITION,
+      label: 'Staked plsDPX',
+    },
+
+    plsFarm: {
+      id: 'pls-farm',
       type: GroupType.POSITION,
       label: 'Staked PLS',
-      groupLabel: 'Farms',
+    },
+
+    tgeClaimable: {
+      id: 'tge-claimable',
+      type: GroupType.POSITION,
+      label: 'Private TGE Allocation',
     },
   },
   tags: [AppTag.ASSET_MANAGEMENT, AppTag.FARMING],
   keywords: [],
-  links: {},
+  links: {
+    discord: 'https://discord.com/invite/plutusdao',
+    twitter: 'https://twitter.com/PlutusDAO_io',
+  },
 
   supportedNetworks: {
     [Network.ARBITRUM_MAINNET]: [AppAction.VIEW],
